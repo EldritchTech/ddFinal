@@ -16,6 +16,28 @@ public class BaseSkills {
 		this.Strength = new Skill();
 		this.Wisdom = new Skill();
 	}
+	
+	/* Desc: initializes base skills with given scores
+	 * Param: int [] scores, must be >3 && <20
+	 * Preconditions: scores.length = 6, skill order alphabetical
+	 * Postcondition: Base Skills initialized with desired score 3 < x <= 20
+	 * 
+	 */
+	
+	public BaseSkills(int [] scores){
+		if(scores.length < 7 && scores.length > 5) {
+			this.Charisma = new Skill(scores[0]);
+			this.Constitution = new Skill(scores[1]);
+			this.Dexterity = new Skill(scores[2]);
+			this.Intelligence = new Skill(scores[3]);
+			this.Strength = new Skill(scores[4]);
+			this.Wisdom = new Skill(scores[5]);
+		}
+	}
+	
+	/*
+	 *  Getters & Setters
+	 */
 
 	public Skill getCharisma() {
 		return Charisma;
@@ -64,6 +86,11 @@ public class BaseSkills {
 	public void setWisdom(Skill wisdom) {
 		Wisdom = wisdom;
 	}
+	
+	/* Adds Racial Bonus from Race class to Skill scores
+	 * Param: int [] racialBonus (from Race class)
+	 * 
+	 */
 	
 	public void addRacialBonus(int [] bonus) {
 		Charisma.addPoints(bonus[0]);

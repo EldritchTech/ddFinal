@@ -11,9 +11,12 @@ public class Race {
 	private int darkVision;
 	private Feature [] racialFeatures;
 	private Feature [] subraceFeatures;
+	private Proficency [] racialProficencies;
+	private Proficency [] subracialProficiencies;
 	
 	public Race(String raceName, String subrace, int [] racialBonus, int [] subraceBonus, String [] resistances, 
-			String [] racialLanguages, int speed, int darkVision, Feature [] racialFeatures, Feature [] subraceFeatures) {
+			String [] racialLanguages, int speed, int darkVision, Feature [] racialFeatures, Feature [] subraceFeatures,
+			Proficency [] racialProficencies, Proficency [] subracialProficencies) {
 		this.raceName = raceName;
 		this.subrace = subrace;
 		this.racialBonus = racialBonus;
@@ -24,6 +27,8 @@ public class Race {
 		this.darkVision = darkVision;
 		this.racialFeatures = racialFeatures;
 		this.subraceFeatures = subraceFeatures;
+		this.racialProficencies = racialProficencies;
+		this.subracialProficiencies = subracialProficencies;
 	}
 	
 	public Race() {
@@ -93,6 +98,32 @@ public class Race {
 	public void setRacialFeatures(Feature[] racialFeatures) {
 		this.racialFeatures = racialFeatures;
 	}
+
+	public Feature[] getSubraceFeatures() {
+		return subraceFeatures;
+	}
+
+	public void setSubraceFeatures(Feature[] subraceFeatures) {
+		this.subraceFeatures = subraceFeatures;
+	}
+
+	public Proficency[] getRacialProficencies() {
+		return racialProficencies;
+	}
+
+	public void setRacialProficencies(Proficency[] racialProficencies) {
+		this.racialProficencies = racialProficencies;
+	}
+
+	public Proficency[] getSubracialProficiencies() {
+		return subracialProficiencies;
+	}
+
+	public void setSubracialProficiencies(Proficency[] subracialProficiencies) {
+		this.subracialProficiencies = subracialProficiencies;
+	}
+	
+	
 	
 	
 }

@@ -65,6 +65,8 @@ public interface Constants {
 					+ "to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. Black, Blue, Brass, Bronze, Copper dragons breath is 5 by 30 ft. line (Dex. save). Gold and Red breaths"
 					+ "are a 15ft cone (Dex save). Green, Silver, White dragons breath are a 15ft cone (Con save)", 1, false, true, 1)};
 			public final Feature [] DRAGONBORN_SUBRACE_FEATURE = null;
+			public final Proficency [] DRAGONBORN_PROFICENCIES = {};
+			public final Proficency [] DRAGONBORN_PROFICENCIES_SUBRACE = {};
 			
 			
 			//Dwarf
@@ -83,6 +85,9 @@ public interface Constants {
 							+ " History check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.")};
 			public final Feature [] DWARF_FEATURES_HILL = {new Feature("Dwarven Toughness", "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.")};
 			public final Feature [] DWARF_FEATURES_MOUNTAIN = {new Feature("Dwarven Armor Training", "You have proficiency with light and medium armor.")};
+			public final Proficency [] DWARF_PROFICENCIES = {};
+			public final Proficency [] DWARF_PROFICENCIES_HILL = {};
+			public final Proficency [] DWARF_PROFICENCIES_MOUNTAIN = {};
 			
 			
 			//Elf
@@ -98,7 +103,12 @@ public interface Constants {
 			public final int ELF_SPEED_WOOD = 35;
 			public final String [] ELF_RESISTANCES = {};
 			public final String [] ELF_LANGUAGES = {"Common", "Elvish"};
-			public final Feature [] ELF_FEATURES = {};
+			public final Feature [] ELF_FEATURES = {new Feature("Fey Ancestory", "You have advantage on saves against being charmed, and magic can't put you to sleep"), new Feature("Trance",
+					"Instead of sleeping, Elves can meditate for 4 hours and receive the same benefits of a long rest")};
+			public final Proficency [] ELF_PROFICENCIES = {};
+			public final Proficency [] ELF_PROFICENCIES_DROW = {};
+			public final Proficency [] ELF_PROFICENCIES_WOOD = {};
+			public final Proficency [] ELF_PROFICENCIES_HIGH = {};
 			
 			public final int ELF_SPEED = 30;
 			public final int ELF_DARKVISION = 60;
