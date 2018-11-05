@@ -10,14 +10,9 @@ public class Character {
 	private boolean shortRest;
 	private boolean longRest;
 	
-	private Skill Charisma;
-	private Skill Constitution;
-	private Skill Dexterity;
-	private Skill Intelligence;
-	private Skill Strength;
-	private Skill Wisdom;
+	private BaseSkills baseSkills;
+	private ExtendedSkills extendedSkills;
 	
-	private Skill [] bonusSkills;
 	
 	
 	public Character(String name, int level) {

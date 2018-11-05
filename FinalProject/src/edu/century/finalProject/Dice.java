@@ -24,7 +24,7 @@ public class Dice {
 
 	@Override
 	public String toString() {
-		return "Dice [sides=" + sides + "]";
+		return "d" + sides;
 	}
 	
 	

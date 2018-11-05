@@ -5,12 +5,16 @@ public class Skill {
 	private int Bonus;
 	private boolean isProf;
 	
+	//Base Constructor
 	public Skill() {
 		this.Score = 8;
 		bonus();
 		isProf = false;
 	}
 	
+	/* Constructor
+	 * Param: Int score (must be over 3 and less than 20)
+	 */
 	public Skill(int score) {
 		if(score >= 3 && score <= 20) {
 			this.Score = score;
@@ -21,6 +25,8 @@ public class Skill {
 		}
 	}
 
+	//Getters + Setters
+	
 	public int getScore() {
 		return Score;
 	}
@@ -50,6 +56,7 @@ public class Skill {
 		bonus();
 	}
 	
+	//Set bonus (from PHB)
 	public void bonus() {
 		switch (Score) {
 		case 3:
@@ -107,5 +114,12 @@ public class Skill {
 			Bonus = 5;
 			break;
 		}
+	}
+	
+	//toString
+	@Override
+	public String toString() {
+		String skill = "Score: " + Score + "\n" + "Bonus: " + Bonus + "\n" + "Proficient? " + isProf + "\n";
+		return skill;
 	}
 }

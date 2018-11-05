@@ -3,6 +3,27 @@ package edu.century.finalProject;
 //Array order {Charisma, Constitution, Dexterity, Intelligence, Strength, Wisdom}
 
 public interface Constants {
+	
+	//Armor
+		//Light Armor
+			public final Armor LIGHT_PADDED = new Armor(11, true, "Light");
+			public final Armor LIGHT_LEATHER = new Armor(11, false, "Light");
+			public final Armor LIGHT_STUDDED = new Armor(12, false, "Light");
+			
+		//Medium Armor
+			public final Armor MEDIUM_HIDE = new Armor(12, false, "Medium");
+			public final Armor MEDIUM_CHAINSHIRT = new Armor(13, false, "Medium");
+			public final Armor MEDIUM_SCALEMAIL = new Armor(14, true, "Medium");
+			public final Armor MEDIUM_BREASTPLATE = new Armor(14, false, "Medium");
+			public final Armor MEDIUM_HALFPLATE = new Armor(15, true, "Medium");
+		
+		//Heavy Armor
+			public final Armor HEAVY_RINGMAIL = new Armor(14, true, "Heavy");
+			public final Armor HEAVY_CHAINMAIL = new Armor(16, true, "Heavy");
+			public final Armor HEAVY_SPLINT = new Armor(17, true, "Heavy");
+	
+	
+	//Races
 		//Aasimar
 			public final String AASIMAR_NAME = "Aasimar";
 			public final int [] AASIMAR_RACIALBONUS = {2, 0, 0, 0, 0, 0};
@@ -65,8 +86,8 @@ public interface Constants {
 					+ "to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. Black, Blue, Brass, Bronze, Copper dragons breath is 5 by 30 ft. line (Dex. save). Gold and Red breaths"
 					+ "are a 15ft cone (Dex save). Green, Silver, White dragons breath are a 15ft cone (Con save)", 1, false, true, 1)};
 			public final Feature [] DRAGONBORN_SUBRACE_FEATURE = null;
-			public final Proficency [] DRAGONBORN_PROFICENCIES = {};
-			public final Proficency [] DRAGONBORN_PROFICENCIES_SUBRACE = {};
+			public final Proficiency [] DRAGONBORN_PROFICIENCIES = {};
+			public final Proficiency [] DRAGONBORN_PROFICIENCIES_SUBRACE = {};
 			
 			
 			//Dwarf
@@ -85,9 +106,9 @@ public interface Constants {
 							+ " History check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.")};
 			public final Feature [] DWARF_FEATURES_HILL = {new Feature("Dwarven Toughness", "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.")};
 			public final Feature [] DWARF_FEATURES_MOUNTAIN = {new Feature("Dwarven Armor Training", "You have proficiency with light and medium armor.")};
-			public final Proficency [] DWARF_PROFICENCIES = {};
-			public final Proficency [] DWARF_PROFICENCIES_HILL = {};
-			public final Proficency [] DWARF_PROFICENCIES_MOUNTAIN = {};
+			public final Proficiency [] DWARF_PROFICIENCIES = {};
+			public final Proficiency [] DWARF_PROFICIENCIES_HILL = {};
+			public final Proficiency [] DWARF_PROFICIENCIES_MOUNTAIN = {};
 			
 			
 			//Elf
@@ -105,15 +126,45 @@ public interface Constants {
 			public final String [] ELF_LANGUAGES = {"Common", "Elvish"};
 			public final Feature [] ELF_FEATURES = {new Feature("Fey Ancestory", "You have advantage on saves against being charmed, and magic can't put you to sleep"), new Feature("Trance",
 					"Instead of sleeping, Elves can meditate for 4 hours and receive the same benefits of a long rest")};
-			public final Proficency [] ELF_PROFICENCIES = {};
-			public final Proficency [] ELF_PROFICENCIES_DROW = {};
-			public final Proficency [] ELF_PROFICENCIES_WOOD = {};
-			public final Proficency [] ELF_PROFICENCIES_HIGH = {};
+			public final Feature [] ELF_FEATURES_DROW = {};
+			public final Feature [] ELF_FEATURES_HIGH = {};
+			public final Feature [] ELF_FEATURES_WOOD = {};
+			public final Proficiency [] ELF_PROFICIENCIES = {};
+			public final Proficiency [] ELF_PROFICIENCIES_DROW = {};
+			public final Proficiency [] ELF_PROFICIENCIES_WOOD = {};
+			public final Proficiency [] ELF_PROFICIENCIES_HIGH = {};
 			
 			public final int ELF_SPEED = 30;
 			public final int ELF_DARKVISION = 60;
 			
 			//Gnome
+			public final String GNOME_NAME = "Gnome";
+			public final int [] GNOME_RACIALBONUS = {0, 0, 0, 2, 0, 0};
+			public final String GNOME_NAME_ROCK = "Rock";
+			public final int [] GNOME_SUBRACEBONUS_ROCK = {0, 1, 0, 0, 0, 0};
+			public final String GNOME_NAME_DEEP = "Deep";
+			public final int [] GNOME_SUBRACEBONUS_DEEP = {0, 0, 1, 0, 0, 0};
+			public final int GNOME_SPEED = 25;
+			public final int GNOME_DARKVISION = 60;
+			public final int GNOME_DARKVISION_DEEP = 120;
+			public final String [] GNOME_RESISTANCES = {};
+			public final String [] GNOME_LANGUAGES = {"Common", "Gnomish"};
+			public final String [] GNOME_LANGUAGES_DEEP = {"Common", "Gnomish", "Undercommon"};
+			public final Feature [] GNOME_FEATURES = {new Feature("Gnome Cunning", "You have advantage on all Intelligence, "
+					+ "Wisdom, and Charisma saving throws against magic.")};
+			public final Feature [] GNOME_FEATURES_ROCK = {new Feature("Artificer's Lore", "Whenever you make an Intelligence "
+					+ "(History) check related to magic items, alchemical objects, or technological devices, you can add twice "
+					+ "your proficiency bonus, instead of any proficiency bonus you normally apply."), new Feature("Tinkerer", 
+					"You have proficiency with artisan’s tools (tinker’s tools). Using those tools, you can spend 1 hour "
+					+ "and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases "
+					+ "to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), "
+					+ "or when you use your action to dismantle it; at that time, you can reclaim the materials used to "
+					+ "create it. You can have up to three such devices active at a time.")};
+			public final Feature [] GNOME_FEATURES_DEEP = {new Feature("Stone Camouflage", "You have advantage on Dexterity "
+					+ "(stealth) checks to hide in rocky terrain.")};
+			public final Proficiency [] GNOME_PROFICIENCIES = {};
+			public final Proficiency [] GNOME_PROFICIENCIES_ROCK = {};
+			public final Proficiency [] GNOME_PROFICIENCIES_DEEP = {};
 			
 			//Half-elf
 			

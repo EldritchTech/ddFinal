@@ -8,18 +8,22 @@ public class Damage {
 	private String dmgType;
 	private boolean isDmg;
 	private Dice [] dmgDice;
+	private int [] dmg;
 	private int damageTotal = 0;
+	private int roll;
 	
 	public Damage(int diceNumber, Dice dN, String dmgType) {
 		this.diceNumber = diceNumber;
 		this.dN = dN;
 		this.dmgType = dmgType;
 		Dice [] dice = new Dice[diceNumber];
+		this.dmg = new int[diceNumber];
 		for(int i = 0; i < diceNumber; i++) {
 			dice[i] = dN;
 		}
 		dmgDice = dice;
 		findIsDmg();
+		dmgRoll();
 	}
 	
 	public void findIsDmg() {
@@ -32,15 +36,20 @@ public class Damage {
 	
 	public void dmgRoll() {
 		for(int i = 0; i < diceNumber; i++) {
-			damageTotal += dmgDice[i].roll();
+			roll = dN.roll();
+			damageTotal += roll;
+			dmg[i] = roll;
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "Damage [diceNumber=" + diceNumber + ", dN=" + dN + ", dmgType=" + dmgType + ", isDmg=" + isDmg
-				+ ", dmgDice=" + Arrays.toString(dmgDice) +  ", Damage=" +  damageTotal + "]";
+		String dmg = "" + diceNumber + "" + dN + ": \n" + 
+				Arrays.toString(this.dmg) + "\n" +
+				"Total: " + damageTotal + " " + dmgType + "\n";
+		return dmg;
 	}
+	
 	
 	
 }
