@@ -8,6 +8,7 @@ public class Feature {
 	private boolean lrReset;
 	private boolean srReset;
 	
+	//No Args constructor
 	public Feature() {
 		this.name = "";
 		this.description = "";
@@ -16,11 +17,17 @@ public class Feature {
 		this.srReset = false;
 	}
 	
+	/* Passive feature constructor
+	 * Used for features that are not active abilities, ex. Elf - Trance
+	 */
 	public Feature(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
 	
+	/* Active feature constructor
+	 * Used for features that are active abilities, ex. Aasimar - Necrotic Shroud
+	 */
 	public Feature(String name, String description, int uses, boolean sr, boolean lr, int lvl) {
 		this.name = name;
 		this.description = description;

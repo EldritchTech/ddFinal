@@ -101,4 +101,21 @@ public class BaseSkills {
 		Wisdom.addPoints(bonus[5]);
 	}
 	
+	/* To String Method
+	 * Returns formatted scores
+	 */
+	@Override
+	public String toString() {
+		String Cha = String.format("%-15s %4d (%2d)\n", "Charisma:", Charisma.getScore(), Charisma.getBonus());
+		String Con = String.format("%-15s %4d (%2d)\n", "Constitution:", Constitution.getScore(), Constitution.getBonus());
+		String Dex = String.format("%-15s %4d (%2d)\n", "Dexterity:", Dexterity.getScore(), Dexterity.getBonus());
+		String Int = String.format("%-15s %4d (%2d)\n", "Intelligence:", Intelligence.getScore(), Intelligence.getBonus());
+		String Str = String.format("%-15s %4d (%2d)\n", "Strength:", Strength.getScore(), Strength.getBonus());
+		String Wis = String.format("%-15s %4d (%2d)\n", "Wisdom:", Wisdom.getScore(), Wisdom.getBonus());
+		
+		String str = Cha + Con + Dex + Int + Str + Wis;
+		
+		return str;
+	}
+	
 }
