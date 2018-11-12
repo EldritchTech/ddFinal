@@ -18,7 +18,7 @@ public class Driver implements Constants{
 		System.out.println(Light.isProf());
 		
 		//Test Skill toString
-		System.out.println(Charisma.toString());
+		System.out.println("\nCharisma: \n" + Charisma.toString());
 		
 		//Test BaseSkills
 		int [] skills = {12, 15, 8, 17, 13, 11};

@@ -43,6 +43,19 @@ public class Race {
 		this.racialFeatures = null;
 	}
 	
+	public Race(String raceName, int [] racialBonus, String [] resistances, 
+			String [] racialLanguages, int speed, int darkVision, Feature [] racialFeatures,
+			Proficiency [] racialProficencies) {
+		this.raceName = raceName;
+		this.racialBonus = racialBonus;
+		this.resistances = resistances;
+		this.racialLanguages = racialLanguages;
+		this.speed = speed;
+		this.darkVision = darkVision;
+		this.racialFeatures = racialFeatures;
+		this.racialProficencies = racialProficencies;
+	}
+	
 	
 	public String getRaceName() {
 		return raceName;

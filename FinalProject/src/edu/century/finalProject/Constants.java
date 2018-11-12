@@ -168,11 +168,67 @@ public interface Constants {
 			
 			//Half-elf
 			
+			public final String HALFELF_NAME = "Half-Elf";
+			public final int [] HALFELF_RACIALBONUS = {2, 0, 0, 0, 0, 0};
+			public final String [] HALFELF_RESISTANCES = {};
+			public final int HALFELF_SPEED = 30;
+			public final int HALFELF_DARKVISION = 60;
+			public final Feature [] HALFELF_FEATURES = {ELF_FEATURES[0]};
+			public final String [] HALFELF_LANGUAGES = {"Common", "Elvish"};
+			public final Proficiency [] HALFELF_PROFICIENCIES = new Proficiency [2];
+			
 			//Half-Orc
+			
+			public final String HALFORC_NAME = "Half orc";
+			public final int [] HALFORC_RACIALBONUS = {0, 1, 0, 0, 2, 0};
+			public final String [] HALFORC_RESISTANCES = {};
+			public final int HALFORC_SPEED = 30;
+			public final int HALFORC_DARKVISION = 60;
+			public final Feature [] HALFORC_FEATURES = {new Feature("Relentless Endurance", "When you are reduced "
+					+ "to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use "
+					+ "this feature again until you finish a long rest.", 1, false, true, 1), new Feature("Savage Attack", 
+							"When you score a critical hit with a melee weapon attack, you can roll one of the weapon's "
+							+ "damage dice one additional time and add it to the extra damage of the critical hit.")};
+			public final String [] HALFORC_LANGUAGES = {"Common", "Orc"};
+			public final Proficiency [] HALFORC_PROFICIENCIES = new Proficiency[1];
 			
 			//Halfling
 			
+			public final String HALFLING_NAME = "Halfling";
+			public final int [] HALFLING_RACIALBONUS = {0, 0, 2, 0, 0, 0};
+			public final String [] HALFLING_RESISTANCES = {};
+			public final int HALFLING_SPEED = 25;
+			public final int HALFLING_DARKVISION = 0;
+			public final Feature [] HALFLING_FEATURES = {new Feature("Lucky", "When you roll a 1 on the d20 for an attack "
+					+ "roll, ability check, or saving throw, you can reroll the die and must use the new roll."), new Feature("Brave", 
+							"You have advantage on saving throws against being frightened."), new Feature ("Halfling Nimbleness", 
+									"You can move through the space of any creature that is of a size larger than yours.")};
+			public final String [] HALFLING_LANGUAGES = {"Halfling", "Common"}; 
+			public final Proficiency [] HALFLING_PROFICIENCIES = {};
+			
+			public final String HALFLING_NAME_LIGHTFOOT = "Lightfoot";
+			public final int [] HALFLING_SUBRACEBONUS_LIGHTFOOT = {1, 0, 0, 0, 0, 0};
+			public final Feature [] HALFLING_FEATURES_LIGHTFOOT = {new Feature("Naturally Stealthy", "You can attempt to hide "
+					+ "even when you are obscured only by a creature that is at least one size larger than you.")};
+			public final Proficiency [] HALFLING_PROFICIENCIES_LIGHTFOOT = {};
+			
+			public final String HALFLING_NAME_STOUT = "Stout";
+			public final int [] HALFLING_SUBRACEBONUS_STOUT = {0, 1, 0, 0, 0, 0};
+			public final String [] HALFLING_RESISTANCES_STOUT = {"Poison"};
+			public final Feature [] HALFLING_FEATURES_STOUT = {new Feature("Stout Resilience", "You have advantage on saving throws"
+					+ " against poison")};
+			public final Proficiency [] HALFLING_PROFICIENCIES_STOUT = {};
+			
 			//Human
+			
+			public final String HUMAN_NAME = "Human";
+			public final int [] HUMAN_RACIALBONUS = {1, 1, 1, 1, 1, 1};
+			public final String [] HUMAN_RESISTANCES = {};
+			public final int HUMAN_SPEED = 30;
+			public final int HUMAN_DARKVISION = 0;
+			public final String [] HUMAN_LANGUAGES = {"Common"};
+			public final Feature [] HUMAN_FEATURES = {};
+			public final Proficiency [] HUMAN_PROFICIENCIES = {};
 			
 			//Lizardfolk
 			
