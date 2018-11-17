@@ -230,9 +230,20 @@ public interface Constants {
 			public final Feature [] HUMAN_FEATURES = {};
 			public final Proficiency [] HUMAN_PROFICIENCIES = {};
 			
-			//Lizardfolk
-			
 			//Tiefling
+			
+			public final String TIEFLING_NAME = "Tiefling";
+			public final int [] TIEFLING_RACIALBONUS = {2, 0, 0, 1, 0, 0};
+			public final String [] TIEFLING_RESISTANCES = {"Fire"};
+			public final int TIEFLING_SPEED = 30;
+			public final int TIEFLING_DARKVISION = 60;
+			public final String [] TIEFLING_LANGUAGES = {"Common", "Infernal"};
+			public final Feature [] TIEFLING_FEATURES = {new Feature("Infernal Legacy", "You know the Thaumaturgy cantrip. "
+					+ "When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this "
+					+ "trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can "
+					+ "cast the Darkness spell once with this trait and regain the ability to do so when you finish a long rest. "
+					+ "Charisma is your spellcasting ability for these spells.")};
+			public final Proficiency [] TIEFLING_PROFICIENCIES = {};
 			
 			/*
 			 * DICE
