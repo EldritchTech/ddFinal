@@ -9,6 +9,7 @@ public class Character {
 	private int armorClass = 10;
 	private boolean shortRest;
 	private boolean longRest;
+	private Class charClass;
 	
 	private BaseSkills baseSkills;
 	private ExtendedSkills extendedSkills;

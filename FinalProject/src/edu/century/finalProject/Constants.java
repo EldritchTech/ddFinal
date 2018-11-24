@@ -39,20 +39,22 @@ public interface Constants {
 			public final String [] AASIMAR_LANGUAGES = {"Celestial", "Common"};
 			public final Feature [] AASIMAR_FEATURE = {new Feature("Light", "You know the light cantrip, charisma is spellcasting ability"), 
 					new Feature ("Healing hands", "You can heal a creature you can touch hit points to your level once per long rest")};
-			public final Feature AASIMAR_FEATURE_FALLEN = new Feature("Necrotic Shroud", "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, "
+			public final Feature[] AASIMAR_FEATURE_FALLEN = {new Feature("Necrotic Shroud", "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, "
 					+ "causing your eyes to turn into pools of darkness and two skeletal, ghostly, flightless wings to sprout from your back. The instant you transform, other creatures "
 					+ "within 10 feet of you that can see you must each succeed on a Charisma saving throw (DC 8 + prof + mod) or become frightened of you until the end of your next "
 					+ "turn. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, once on each of your turns, you can "
-					+ "eal extra necrotic damage equal to your level to one target when you deal damage to it with an attack.", 1, false, true, 3);
-			public final Feature AASIMAR_FEATURE_PROTECTOR = new Feature("Radiant Consumption", "You unleash the divine energy within yourself, causing a searing light to radiate from you,"
+					+ "eal extra necrotic damage equal to your level to one target when you deal damage to it with an attack.", 1, false, true, 3)};
+			public final Feature [] AASIMAR_FEATURE_PROTECTOR = {new Feature("Radiant Consumption", "You unleash the divine energy within yourself, causing a searing light to radiate from you,"
 					+ " pour out of your eyes and mouth, and threaten to char you. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you shed "
 					+ "bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, you and each creature within 10 feet of you take "
 					+ "radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage "
-					+ "to it with an attack or a spell. The extra radiant damage equals your level.", 1, false, true, 3);
-			public final Feature AASIMAR_FEATURE_SCOURGE = new Feature("Radiant Soul", "Unleash the divine energy within yourself, causing your eyes to glimmer and two luminous, incorporeal "
+					+ "to it with an attack or a spell. The extra radiant damage equals your level.", 1, false, true, 3)};
+			public final Feature [] AASIMAR_FEATURE_SCOURGE = {new Feature("Radiant Soul", "Unleash the divine energy within yourself, causing your eyes to glimmer and two luminous, incorporeal "
 					+ "wings to sprout from your back. Your transformation lasts for 1 minute or until you end it as a bonus action. During it, you have a flying speed of 30 feet, and once on "
 					+ "each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level.", 
-					1, false, true, 3);
+					1, false, true, 3)};
+			public final Proficiency [] AASIMAR_PROFICIENCIES = {};
+			public final Proficiency [] AASIMAR_PROFICIENCIES_SUBRACE = {};
 			
 			//Dragonborn
 			public final String DRAGONBORN_NAME = "Dragonborn";
@@ -245,6 +247,9 @@ public interface Constants {
 					+ "Charisma is your spellcasting ability for these spells.")};
 			public final Proficiency [] TIEFLING_PROFICIENCIES = {};
 			
+			
+			
+			
 			/*
 			 * DICE
 			 */
@@ -256,6 +261,19 @@ public interface Constants {
 			public final Dice d12 = new Dice(12);
 			public final Dice d20 = new Dice(20);
 			public final Dice d100 = new Dice(100);
+			
+			/* 
+			 * Classes
+			 */
+			//Barbarian
+			public final String BARBARIAN_NAME = "Barbarian";
+			public final int BARBARIAN_BASEHP = 12;
+			public final Dice BARBARIAN_HITDICE = d12;
+			public final int BARBARIAN_NUMHITDIE = 1;
+			public final int [] BARBARIAN_SPELLSLOTS = {};
+			public final Proficiency [] BARBARIAN_PROFICIENCIES = new Proficiency[9];
+			
+			//Bard
 			
 			
 			/* Skill points
