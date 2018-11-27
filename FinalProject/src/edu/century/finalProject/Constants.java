@@ -62,6 +62,7 @@ public interface Constants {
 			public final int [] DRAGONBORN_SUBRACEBONUS = {0, 0, 0, 0, 0, 0};
 			public final int DRAGONBORN_SPEED = 30;
 			public final int DRAGONBORN_DARKVISION = 0;
+			public final String [] DRAGONBORN_RESISTANCES = {};
 			public final String DRAGONBORN_NAME_BLACK = "Black";
 			public final String [] DRAGONBORN_RESISTANCES_BLACK = {"Acid"};
 			public final String DRAGONBORN_NAME_BLUE = "Blue";

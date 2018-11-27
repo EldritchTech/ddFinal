@@ -25,7 +25,7 @@ public class BaseSkills {
 	 */
 	
 	public BaseSkills(int [] scores){
-		if(scores.length < 7 && scores.length > 5) {
+		if(scores.length == 6) {
 			this.Charisma = new Skill(scores[0]);
 			this.Constitution = new Skill(scores[1]);
 			this.Dexterity = new Skill(scores[2]);
