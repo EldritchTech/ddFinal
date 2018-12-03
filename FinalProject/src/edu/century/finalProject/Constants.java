@@ -277,9 +277,16 @@ public interface Constants {
 			//Bard
 			
 			
-			/* Skill points
-			 * 
+			
+			
+			/*
+			 * Spells
 			 */
+			
+			public final Damage VICIOUSMOCKERY = new Damage(1, d4, 0, "Psychic");
+			
+			public final Damage CUREWOUNDS = new Damage(1, d8, 0, "Healing");
+
 			
 			
 }

@@ -1,14 +1,16 @@
 package edu.century.finalProject;
 
+import java.util.ArrayList;
+
 public class Class implements Constants{
 	private String className;
 	private int baseHP;
+	private int hp;
 	private Dice hitDice;
 	private int numHitDie;
-	private Proficiency [] classProficiencies;
-	private Feature [] classFeatures;
+	private ArrayList<Proficiency> classProficiencies;
+	private ArrayList<Feature> classFeatures;
 	private int classLvl;
-	private static int index = 0;
 	
 	//Default constructor
 	public Class() {
@@ -16,14 +18,14 @@ public class Class implements Constants{
 		this.baseHP = 8;
 		this.hitDice = d8;
 		this.numHitDie = 1;
-		this.classProficiencies = null;
-		this.classFeatures = null;
+		this.classProficiencies = new ArrayList<Proficiency>();
+		this.classFeatures = new ArrayList<Feature>();
 		this.classLvl = 1;
 	}
 	
 	//Constructor
-	public Class(String className, int baseHP, Dice hitDice, int numHitDie, int [] spellSlots, 
-			Proficiency [] classProficiencies, Feature [] classFeatures, int classLvl) {
+	public Class(String className, int baseHP, Dice hitDice, int numHitDie, 
+			ArrayList<Proficiency> classProficiencies, ArrayList<Feature> classFeatures, int classLvl) {
 		this.className = className;
 		this.baseHP = baseHP;
 		this.hitDice = hitDice;
@@ -59,20 +61,16 @@ public class Class implements Constants{
 		this.numHitDie = numHitDie;
 	}
 
-	public Proficiency[] getclassProficiencies() {
-		return classProficiencies;
-	}
-
-	public void setclassProficiencies(Proficiency[] classProficiencies) {
-		this.classProficiencies = classProficiencies;
-	}
-
-	public Feature[] getClassFeatures() {
+	public ArrayList<Feature> getClassFeatures() {
 		return classFeatures;
 	}
 
-	public void setClassFeatures(Feature[] classFeatures) {
+	public void setClassFeatures(ArrayList<Feature> classFeatures) {
 		this.classFeatures = classFeatures;
+	}
+
+	public void setClassProficiencies(ArrayList<Proficiency> classProficiencies) {
+		this.classProficiencies = classProficiencies;
 	}
 
 	public int getClassLvl() {
@@ -83,29 +81,31 @@ public class Class implements Constants{
 		this.classLvl = classLvl;
 	}
 	
+	
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
 	public void addProficiency(Skill skill) {
-		if(index < classProficiencies.length) {
-			this.classProficiencies[index] = new Proficiency(skill);
-			index++;
-		} else {
-			ensureCapacity();
-			this.classProficiencies[index] = new Proficiency(skill);
-			index++;
-		}
-		
+		classProficiencies.add(new Proficiency(skill));		
 	}
 	
-	public void ensureCapacity() {
-		Proficiency [] newProficiencies = new Proficiency[(classProficiencies.length * 2)];
-		for(int i = 0; i < classProficiencies.length; i++) {
-			newProficiencies[i] = classProficiencies[i];
-		}
-		setclassProficiencies(newProficiencies);
+	public void addFeature(Feature feature) {
+		classFeatures.add(feature);
 	}
 	
-	public void levelUp() {
-		
-	}
 	
 	
 }

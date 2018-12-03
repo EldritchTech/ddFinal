@@ -2,6 +2,9 @@ package edu.century.finalProject;
 
 public class Character {
 	private String name;
+	private String gender;
+	private String Campaign;
+	private String playerName;
 	private int level = 1;
 	private Race race;
 	private int proficiencyBonus;
@@ -9,7 +12,8 @@ public class Character {
 	private int armorClass = 10;
 	private boolean shortRest;
 	private boolean longRest;
-	private Class charClass;
+	private Barbarian barbarianClass;
+	private Bard bardClass;
 	
 	private BaseSkills baseSkills;
 	private ExtendedSkills extendedSkills;
@@ -24,8 +28,10 @@ public class Character {
 		this.hitPoints = 0;
 		this.shortRest = true;
 		this.longRest = true;
+		this.barbarianClass = null;
+		this.bardClass = null;
 		this.baseSkills = new BaseSkills();
-		this.extendedSkills = new ExtendedSkills();
+		this.extendedSkills = new ExtendedSkills(baseSkills);
 	}
 
 	//Set proficiency bonus based on level
@@ -101,133 +107,125 @@ public class Character {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 	public int getLevel() {
 		return level;
 	}
 
-
-
 	public void setLevel(int level) {
 		this.level = level;
 	}
-
-
 
 	public Race getRace() {
 		return race;
 	}
 
-
-
 	public void setRace(Race race) {
 		this.race = race;
 	}
-
-
 
 	public int getProficiencyBonus() {
 		return proficiencyBonus;
 	}
 
-
-
 	public void setProficiencyBonus(int proficiencyBonus) {
 		this.proficiencyBonus = proficiencyBonus;
 	}
-
-
 
 	public int getHitPoints() {
 		return hitPoints;
 	}
 
-
-
 	public void setHitPoints(int hitPoints) {
 		this.hitPoints = hitPoints;
 	}
-
-
 
 	public int getArmorClass() {
 		return armorClass;
 	}
 
-
-
 	public void setArmorClass(int armorClass) {
 		this.armorClass = armorClass;
 	}
-
-
 
 	public boolean isShortRest() {
 		return shortRest;
 	}
 
-
-
 	public void setShortRest(boolean shortRest) {
 		this.shortRest = shortRest;
 	}
-
-
 
 	public boolean isLongRest() {
 		return longRest;
 	}
 
-
-
 	public void setLongRest(boolean longRest) {
 		this.longRest = longRest;
 	}
-
-
-
-	public Class getCharClass() {
-		return charClass;
-	}
-
-
-
-	public void setCharClass(Class charClass) {
-		this.charClass = charClass;
-	}
-
-
 
 	public BaseSkills getBaseSkills() {
 		return baseSkills;
 	}
 
-
-
 	public void setBaseSkills(BaseSkills baseSkills) {
 		this.baseSkills = baseSkills;
 	}
-
-
 
 	public ExtendedSkills getExtendedSkills() {
 		return extendedSkills;
 	}
 
-
-
 	public void setExtendedSkills(ExtendedSkills extendedSkills) {
 		this.extendedSkills = extendedSkills;
 	}
 	
-	
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getCampaign() {
+		return Campaign;
+	}
+
+	public void setCampaign(String campaign) {
+		Campaign = campaign;
+	}
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public Barbarian getBarbarianClass() {
+		return barbarianClass;
+	}
+
+	public void setBarbarianClass(Barbarian barbarianClass) {
+		this.barbarianClass = barbarianClass;
+	}
+
+	public Bard getBardClass() {
+		return bardClass;
+	}
+
+	public void setBardClass(Bard bardClass) {
+		this.bardClass = bardClass;
+	}
+
+
+
+
 	
 	
 }

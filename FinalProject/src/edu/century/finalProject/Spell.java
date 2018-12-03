@@ -11,6 +11,8 @@ public class Spell {
 	private String duration;
 	private int range;
 	private String description;
+	private boolean concentration;
+	private Damage dmg;
 	
 	private boolean bardSpell;
 	private boolean clericSpell;
@@ -21,9 +23,10 @@ public class Spell {
 	private boolean warlockSpell;
 	private boolean wizardSpell;
 	
-	public Spell(String name, boolean verbal, boolean somatic, boolean material, String components, String castingTime,
-			String duration, int range, String description) {
+	public Spell(String name, int lvl, boolean verbal, boolean somatic, boolean material, String components, String castingTime,
+			String duration, int range, String description, boolean concentration) {
 		this.name = name;
+		this.level = lvl;
 		this.verbal = verbal;
 		this.somatic = somatic;
 		this.material = material;
@@ -32,10 +35,27 @@ public class Spell {
 		this.duration = duration;
 		this.range = range;
 		this.description = description;
+		this.concentration = concentration;
+	}
+	
+	public Spell(String name, int lvl, boolean verbal, boolean somatic, boolean material, String components, String castingTime,
+			String duration, int range, String description, boolean concentration, Damage dmg) {
+		this.name = name;
+		this.level = lvl;
+		this.verbal = verbal;
+		this.somatic = somatic;
+		this.material = material;
+		this.components = components;
+		this.castingTime = castingTime;
+		this.duration = duration;
+		this.range = range;
+		this.description = description;
+		this.concentration = concentration;
 	}
 	
 	public Spell() {
 		this.name = null;
+		this.level = 0;
 		this.verbal = false;
 		this.somatic = false;
 		this.material = false;
@@ -44,6 +64,7 @@ public class Spell {
 		this.duration = "";
 		this.range = 0;
 		this.description = "";
+		this.concentration = false;
 	}
 
 	public String getName() {
@@ -157,4 +178,11 @@ public class Spell {
 	public void setWizard() {
 		wizardSpell = true;
 	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
 }
