@@ -99,7 +99,7 @@ public class Class implements Constants{
 	}
 
 	public void addProficiency(Skill skill) {
-		classProficiencies.add(new Proficiency(skill));		
+		classProficiencies.add(new Proficiency(skill, classLvl));		
 	}
 	
 	public void addFeature(Feature feature) {

@@ -4,6 +4,7 @@ public class Skill {
 	private int Score;
 	private int Bonus;
 	private boolean isProf;
+	private int proficiencyBonus;
 	
 	//Base Constructor
 	public Skill() {
@@ -47,8 +48,12 @@ public class Skill {
 		return isProf;
 	}
 
-	public void setProf(boolean isProf) {
+	public void setProf(boolean isProf, int lvl) {
 		this.isProf = isProf;
+		if(isProf = true) {
+			ProficiencyBonus(lvl);
+			setBonus(getBonus() + proficiencyBonus);
+		}
 	}
 	
 	public void addPoints(int bonus) {
@@ -121,5 +126,70 @@ public class Skill {
 	public String toString() {
 		String skill = "Score: " + Score + "\n" + "Bonus: " + Bonus + "\n" + "Proficient? " + isProf + "\n";
 		return skill;
+	}
+	
+	private void ProficiencyBonus(int level) {
+		switch (level) {
+		case 1:
+			proficiencyBonus = 2;
+			break;
+		case 2:
+			proficiencyBonus = 2;
+			break;
+		case 3: 
+			proficiencyBonus = 2;
+			break;
+		case 4:
+			proficiencyBonus = 2;
+			break;
+		case 5:
+			proficiencyBonus = 3;
+			break;
+		case 6: 
+			proficiencyBonus = 3;
+			break;
+		case 7: 
+			proficiencyBonus = 3;
+			break;
+		case 8:
+			proficiencyBonus = 3;
+			break;
+		case 9: 
+			proficiencyBonus = 4;
+			break;
+		case 10:
+			proficiencyBonus = 4;
+			break;
+		case 11:
+			proficiencyBonus = 4;
+			break;
+		case 12:
+			proficiencyBonus = 4;
+			break;
+		case 13:
+			proficiencyBonus = 5;
+			break;
+		case 14: 
+			proficiencyBonus = 5;
+			break;
+		case 15:
+			proficiencyBonus = 5;
+			break;
+		case 16: 
+			proficiencyBonus = 5;
+			break;
+		case 17:
+			proficiencyBonus = 6;
+			break;
+		case 18: 
+			proficiencyBonus = 6;
+			break;
+		case 19: 
+			proficiencyBonus = 6;
+			break;
+		case 20: 
+			proficiencyBonus = 6;
+			break;
+		}
 	}
 }

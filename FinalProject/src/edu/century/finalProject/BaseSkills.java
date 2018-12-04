@@ -100,6 +100,12 @@ public class BaseSkills {
 		Strength.addPoints(bonus[4]);
 		Wisdom.addPoints(bonus[5]);
 	}
+		
+	public String scoreToString(Skill s) {
+		String Score= String.format("%4d (%2d)\n", s.getScore(), s.getBonus());
+		return Score;
+
+	}
 	
 	/* To String Method
 	 * Returns formatted scores

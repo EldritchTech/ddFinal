@@ -36,6 +36,7 @@ public class Spell {
 		this.range = range;
 		this.description = description;
 		this.concentration = concentration;
+		this.dmg = null;
 	}
 	
 	public Spell(String name, int lvl, boolean verbal, boolean somatic, boolean material, String components, String castingTime,
@@ -51,6 +52,7 @@ public class Spell {
 		this.range = range;
 		this.description = description;
 		this.concentration = concentration;
+		this.dmg = dmg;
 	}
 	
 	public Spell() {
@@ -182,6 +184,86 @@ public class Spell {
 	@Override
 	public String toString() {
 		return name;
+	}
+
+	public boolean isConcentration() {
+		return concentration;
+	}
+
+	public void setConcentration(boolean concentration) {
+		this.concentration = concentration;
+	}
+
+	public Damage getDmg() {
+		return dmg;
+	}
+
+	public void setDmg(Damage dmg) {
+		this.dmg = dmg;
+	}
+
+	public boolean isBardSpell() {
+		return bardSpell;
+	}
+
+	public void setBardSpell(boolean bardSpell) {
+		this.bardSpell = bardSpell;
+	}
+
+	public boolean isClericSpell() {
+		return clericSpell;
+	}
+
+	public void setClericSpell(boolean clericSpell) {
+		this.clericSpell = clericSpell;
+	}
+
+	public boolean isDruidSpell() {
+		return druidSpell;
+	}
+
+	public void setDruidSpell(boolean druidSpell) {
+		this.druidSpell = druidSpell;
+	}
+
+	public boolean isPaladinSpell() {
+		return paladinSpell;
+	}
+
+	public void setPaladinSpell(boolean paladinSpell) {
+		this.paladinSpell = paladinSpell;
+	}
+
+	public boolean isRangerSpell() {
+		return rangerSpell;
+	}
+
+	public void setRangerSpell(boolean rangerSpell) {
+		this.rangerSpell = rangerSpell;
+	}
+
+	public boolean isSorcererSpell() {
+		return sorcererSpell;
+	}
+
+	public void setSorcererSpell(boolean sorcererSpell) {
+		this.sorcererSpell = sorcererSpell;
+	}
+
+	public boolean isWarlockSpell() {
+		return warlockSpell;
+	}
+
+	public void setWarlockSpell(boolean warlockSpell) {
+		this.warlockSpell = warlockSpell;
+	}
+
+	public boolean isWizardSpell() {
+		return wizardSpell;
+	}
+
+	public void setWizardSpell(boolean wizardSpell) {
+		this.wizardSpell = wizardSpell;
 	}
 	
 	

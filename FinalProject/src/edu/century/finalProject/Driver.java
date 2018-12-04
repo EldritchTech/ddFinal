@@ -9,12 +9,12 @@ public class Driver implements Constants, PHB{
 		
 		//Test proficiency
 		Skill Charisma = new Skill(15);
-		Proficiency test1 = new Proficiency(Charisma);
+		Proficiency test1 = new Proficiency(Charisma, 2);
 		System.out.println(Charisma.isProf());
 		
 		//Test Armor proficiency
 		Armor Light = new Armor(15, false, "Light");
-		Proficiency test2 = new Proficiency(Light);
+		Proficiency test2 = new Proficiency(Light, 5);
 		System.out.println(Light.isProf());
 		
 		//Test Skill toString

@@ -3,12 +3,12 @@ package edu.century.finalProject;
 public class Proficiency extends Skill{
 	private Skill skillName;
 	
-	public Proficiency(Skill skill) {
+	public Proficiency(Skill skill, int lvl) {
 		this.skillName = skill;
-		setProficiency();
+		setProficiency(lvl);
 	}
 
-	private void setProficiency() {
-		skillName.setProf(true);
+	private void setProficiency(int lvl) {
+		skillName.setProf(true, lvl);
 	}
 }
