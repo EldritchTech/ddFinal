@@ -287,6 +287,16 @@ public interface Constants {
 			
 			public final Damage CUREWOUNDS = new Damage(1, d8, 0, "Healing");
 
+			/*
+			 * Weapons
+			 */
 			
+			public final Attack battleAxeAtt = new Attack(0, new Damage(1, d8, 0, "Slashing"));
+			public final int [] battleAxeRange = {};
+			public final boolean [] battleAxeProp = {false, false, false, false, false, false, true};
+			
+			public final boolean [] daggerProperties = {false, true, true, false, true, false, false};
+			public final int [] daggerRange = {20, 60};
+			public final Attack daggerAttack = new Attack(0, new Damage(1, d4, 0, "Piercing"));
 			
 }

@@ -312,5 +312,15 @@ public interface PHB extends Constants{
 			+ "or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs."
 			+ " Otherwise, the extent of the illusion is up to you.", false);
 	
+	
+	/*
+	 * Weapon
+	 */
+	
+	public final String [] weaponList = {"Battle Axe", "Dagger"};
+	
+	public final Weapon battleAxe = new Weapon("Battle axe", battleAxeRange, battleAxeProp, 0, battleAxeAtt);
+	public final Weapon dagger = new Weapon("Dagger", daggerRange, daggerProperties, 0, daggerAttack);
+	
 
 }
